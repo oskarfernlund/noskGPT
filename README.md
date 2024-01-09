@@ -2,7 +2,7 @@
 
 noskGPT is a nano-scale (1,170,625 parameter) generative pretrained transformer which generates Shakespearian dialogue. It has been pre-trained on an abridged corpus of William Shakespeare's plays (see `data/shakespeare.txt`) and uses simple character-level tokenisation. The scaled dot-product attention mechanisms and transformer architecture have been written from scratch using `pytorch`, and are inspired by the original transformer architecture outlined in [Attention Is All You Need](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf).
 
-## Architecture
+## Architecture :house:
 
 The intention of noskGPT is to be small and simple enough to train and run on a typical laptop CPU.
 
@@ -15,7 +15,7 @@ Summary of noskGPT architecture:
 - Layers / transformer blocks: 5
 - Dropout probability (training): 0.1
 
-## Installation
+## Installation :minidisc:
 
 To install noskGPT's dependencies, you will need `python 3.10` and `poetry`.
 
@@ -26,7 +26,7 @@ poetry install
 
 If you do not have `poetry` or do not wish to use it, the dependencies in the `pyproject.toml` file can be installed manually using a package manager like `pip` or `conda`.
 
-## Command Line Interface
+## Command Line Interface :computer:
 
 ![alt text](https://github.com/oskarfernlund/noskGPT/blob/master/assets/cli_logo.png)
 
@@ -42,5 +42,22 @@ The optional `--max-chars` flag specifies the number of characters noskGPT will 
 
 The generated text definitely isn't perfect -- the overall tone feels very Shakespearian but noskGPT tends to make up words (largely a consequence of the character-level tokenisation) and the overall narrative isn't very clear. However, I think this is pretty impressive for such a small and simple model!
 
-## Training
+## Training :hourglass:
 
+Training noskGPT took me about 3-4 hours on my M2 MacBook CPU.
+
+Summary of noskGPT training details:
+
+- batch size: 64
+- learning rate: 0.001
+- training epochs: 10,000
+
+The final validation loss I was able to achieve using the architecure and training details above was around 1.52. If you have more patience than me or access to more compute resources, I would encourage you to try scaling up the model (or using more sophisticated tokenisation) to see if you can do better :) To convert the training notebook from `.py` to `.ipynb`, run the following command:
+
+```
+jupytext --to notebook training.py
+```
+
+## Acknowledgements :heart:
+
+Thank you very much to Andrej Karpathy for your wonderful tutorial on generative language models :sparkles:
