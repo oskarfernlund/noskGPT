@@ -28,7 +28,7 @@ If you do not have `poetry` or do not wish to use it, the dependencies in the `p
 
 ## Command Line Interface
 
-![alt text](https://github.com/oskarfernlund/noskGPT/blob/master/assets/cli3.png)
+![alt text](https://github.com/oskarfernlund/noskGPT/blob/master/assets/cli_logo.png)
 
 noskGPT has a simple command line interface which can be invoked as follows:
 
@@ -38,7 +38,7 @@ python noskgpt.py --max-chars=1000
 
 The optional `--max-chars` flag specifies the number of characters noskGPT will generate in response to a given prompt, and has a default value of 1000. An example prompt / response interaction with noskGPT is shown below:
 
-![alt text](https://github.com/oskarfernlund/noskGPT/blob/master/assets/cli4.png)
+![alt text](https://github.com/oskarfernlund/noskGPT/blob/master/assets/cli_prompt.png)
 
 The generated text definitely isn't perfect -- the overall tone feels very Shakespearian but noskGPT tends to make up words (largely a consequence of the character-level tokenisation) and the overall narrative isn't very clear. However, I think this is pretty impressive for such a small and simple model!
 
