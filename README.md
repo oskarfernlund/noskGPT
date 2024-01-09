@@ -19,23 +19,20 @@ The model weights can be found in the `weights.pth` file in the root directory.
 
 ## Installation :minidisc:
 
-Clone this repository using `git clone https://github.com/oskarfernlund/noskGPT.git` and navigate to the root directory using `cd noskGPT`.
+To install noskGPT's dependencies, you will need to have `python 3.10`. I personally like managing my python versions and environments with `miniconda` and managing project dependencies with `poetry`, but I have included installation instructions for `poetry` and `conda`/`pip`. With a `python 3.10` environment activated, run one of the following sets of commands:
 
 ### Poetry
-To install noskGPT's dependencies, you will need `python 3.10` and `poetry`.
 
 ```
-poetry use <path to python 3.10 executable>
+poetry env use $which python
 poetry install
 ```
 
 ### Conda / Pip
 
-If you do not have `poetry` or do not wish to use it, the following steps can be taken using `conda` and `pip`:
-
-1. Create a new `conda` environment using `conda create -n noskgpt python=3.10`
-2. Activate the environment using `conda activate noskgpt`
-3. Install the dependencies using `pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
 ## Command Line Interface :computer:
 
