@@ -1,6 +1,6 @@
 ![alt text](https://github.com/oskarfernlund/noskGPT/blob/master/assets/logo.png)
 
-noskGPT is a nano-scale (1,170,625 parameter) generative pretrained transformer which generates Shakespearian dialogue. It has been pre-trained on an abridged corpus of William Shakespeare's plays (see `data/shakespeare.txt`) and uses simple character-level tokenisation. The scaled dot-product attention mechanisms and transformer architecture have been written from scratch using `pytorch`, and are inspired by the original transformer architecture outlined in [Attention Is All You Need](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf).
+noskGPT is a nano-scale (1,170,625 parameter) generative pretrained transformer which generates Shakespearian dialogue. It has been pre-trained on an abridged corpus of William Shakespeare's plays (see the `shakespeare.txt` file in the `data/` directory) and uses simple character-level tokenisation. The scaled dot-product attention mechanisms and transformer architecture have been written from scratch using `pytorch`, and are inspired by the original transformer architecture outlined in [Attention Is All You Need](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf).
 
 ## Architecture :house:
 
@@ -14,6 +14,8 @@ Summary of noskGPT architecture:
 - Attention heads per transformer block: 4
 - Layers / transformer blocks: 5
 - Dropout probability (training): 0.1
+
+The model weights can be found in the `weights.pth` file in the root directory.
 
 ## Installation :minidisc:
 
@@ -30,7 +32,7 @@ If you do not have `poetry` or do not wish to use it, the dependencies in the `p
 
 ![alt text](https://github.com/oskarfernlund/noskGPT/blob/master/assets/cli_logo.png)
 
-noskGPT has a simple command line interface which can be invoked as follows:
+noskGPT has a simple command line interface which can be invoked as follows from the root directory:
 
 ```
 python noskgpt.py --max-chars=1000
@@ -52,7 +54,7 @@ Summary of noskGPT training details:
 - learning rate: 0.001
 - training epochs: 10,000
 
-The final validation loss I was able to achieve using the architecure and training details above was around 1.52. If you have more patience than me or access to more compute resources, I would encourage you to try scaling up the model (or using more sophisticated tokenisation) to see if you can do better :) To convert the training notebook from `.py` to `.ipynb`, run the following command:
+The final validation loss I was able to achieve using the architecure and training details above was around 1.52. If you have more patience than me or access to more compute resources, I would encourage you to try scaling up the model (or using more sophisticated tokenisation) to see if you can do better :) To convert the training notebook from `.py` to `.ipynb`, run the following command from the root directory:
 
 ```
 jupytext --to notebook training.py
